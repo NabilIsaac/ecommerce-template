@@ -3,7 +3,7 @@ html,body {
     /* background-color: #f2f2f2; */
     height:100%;
     color: #43484D !important;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .card {
@@ -11,6 +11,16 @@ html,body {
   padding: 50px;
   box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
 }
+
+@media (max-width: 535px) {
+  .card {
+    margin-bottom: 20px;
+    padding: 25px;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  }
+}
+
+/* start of nav and banner section */
 
 .navbar-transparent {
     background-color: rgba(255, 255, 255, 0) none repeat scroll 0 0 !important;
@@ -27,6 +37,11 @@ html,body {
     font-size: small !important;
     font-weight: 500;
 }
+
+.left-align-navbar h1 {
+  font-size: 18px;
+}
+
 /* search button and bar */
 .button {
 	font-size: 9px;
@@ -51,7 +66,8 @@ html,body {
 	display: inline-block;
 	height: 40px;
 	width: 50px;
-	vertical-align: bottom;
+  vertical-align: bottom;
+
 }
 
 .search-icon {
@@ -129,13 +145,19 @@ html,body {
 
   /* search button and bar end */
 
+  .dropdown-menu {
+    min-width: 0 !important;
+  }
+
   /* scrolled nav bar */
   .scrolled-nav {
     height: 80px !important;
     line-height: 10px !important;
     background-color: #fff !important;
     border-bottom: 1px solid #f8f9fa !important;
-}
+  }
+
+
 
 .banner {
     background-image: url(../images/bg-header1.jpg);
@@ -171,8 +193,8 @@ html,body {
     text-align: center;
    
   }
-  .bg-btn {
-    background-color: #000;
+  .banner a {
+    background-color: #323232;
     color: #fff;
     text-transform: uppercase;
     padding: 10px 20px;
@@ -182,18 +204,160 @@ html,body {
   .center {
     text-align: center;
   }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    /* padding: 20px; */
+    margin-top: 5px;
+  }
   
 }
 
+
+
+
+
 .banner a {
-    background-color: #E5D7B3;
+    background-color: #323232;
     color: #fff;
     text-transform: uppercase;
     padding: 10px 20px;
     text-decoration: none;
 }
 
+/* end of nav and banner section */
 
+.no-gutters {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* start of login */
+
+.login-bg {
+  background-image: url(../images/login-bg.png);
+  /* background-color: lightcyan; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 656px;
+}
+
+.login-section {
+  padding: 20px;
+}
+
+.login-section h6 {
+  float: right;
+  color: #ccc;
+  font-size: 14px;
+}
+.login-section h5 {
+  float: right;
+  color: #000;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+.login-section a {
+  color: #000;
+}
+
+.login-section h2 {
+  text-align: center;
+  color: #000;
+  font-size: 30px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.login-section h5 h6 {
+  display: inline;
+}
+
+.login-section .google-btn {
+  color: #000;
+  border-radius: 40px;
+  padding: 10px 10px;
+  width: 50%;
+  box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.10);
+  background-color: #fff;
+}
+
+.login-section .login-btn {
+  color: #fff;
+  background-color: #323232;
+  border-radius: 40px;
+  padding: 15px 0;
+  width: 50%;
+  box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.10);
+}
+
+.login-section img {
+  margin-right: 45px;
+  height: 40px;
+}
+
+.login-section input {
+  border-radius: 40px;
+  padding: 25px;
+  width: 50%;
+  box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.10) !important;
+}
+
+.login-section .form-control {
+  display: initial;
+}
+
+@media (max-width: 535px) {
+
+  .login-section input {
+    border-radius: 40px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.10) !important;
+  }
+
+  .login-section .google-btn {
+    color: #000;
+    border-radius: 40px;
+    padding: 10px 10px;
+    width: 90%;
+    box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.10);
+    background-color: #fff;
+  }
+  
+  .login-section .login-btn {
+    color: #fff;
+    background-color: #323232;
+    border-radius: 40px;
+    padding: 10px 0;
+    width: 90%;
+    box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.10);
+  }
+
+  .login-section img {
+    margin-right: 45px;
+    height: 30px;
+  }
+}
+
+/* end of login */
+
+.site-section {
+  padding: 100px 0; 
+}
+  @media (min-width: 768px) {
+      .site-section {
+          padding: 200px 0; 
+      }
+  }
+.site-section.site-section-sm {
+  padding: 4em 0; 
+}
+
+/* start of new range section */
 
 .new-range h1 {
     font-size: 70px;
@@ -219,19 +383,9 @@ html,body {
   }
 }
 
+/* end of new range section */
 
-.site-section {
-    padding: 100px 0; 
-}
-    @media (min-width: 768px) {
-        .site-section {
-            padding: 200px 0; 
-        }
-    }
-.site-section.site-section-sm {
-    padding: 4em 0; 
-}
-
+/* start of featured section */
 
 .featured h6 {
     font-family: 'Alegreya Sans', sans-serif;
@@ -263,7 +417,7 @@ html,body {
 }
 
 .featured a {
-    background-color: #E5D7B3;
+    background-color: #323232;
     color: #fff;
     padding: 12px 25px;
     text-transform: uppercase;
@@ -322,7 +476,7 @@ html,body {
   }
 
   .featured a {
-    background-color: #E5D7B3;
+    background-color: #323232;
     color: #fff;
     padding: 10px 20px;
     text-transform: uppercase;
@@ -349,6 +503,10 @@ html,body {
   
   }
 
+  /* end of featured section */
+
+  /* start of products section */
+
   .product .card {
       height: 20rem !important;
       width: 18rem !important; 
@@ -358,7 +516,7 @@ html,body {
   }
 
   .product h6 {
-      color: #E5D7B3;
+      color: #323232;
       font-size: 14px;
   }
 
@@ -382,7 +540,7 @@ html,body {
   }
 
 .advert h1 {
-    color: #E5D7B3;
+    color: #323232;
     margin-bottom: 10px;
 }
 
@@ -557,7 +715,7 @@ html,body {
 }
 
 .product-price a {
-  background-color: #E5D7B3;
+  background-color: #323232;
   color: #fff;
   padding: 12px 25px;
   text-transform: uppercase;
@@ -586,13 +744,9 @@ html,body {
 
 /* start of cart */
 
-.cart {
-  /* margin-top: 50px; */
-}
-
 
 .cart a {
-  background-color: #E5D7B3;
+  background-color: #323232;
   color: #fff;
   padding: 12px 25px;
   text-transform: uppercase;
@@ -600,14 +754,6 @@ html,body {
   margin-top: 20px;
 }
 
-@media (max-width: 535px) {
-
-}
-
-@media (max-width: 800px) {
-
-    
-}
 
 .shopping-cart h4 {
     font-weight: 600;
@@ -615,77 +761,23 @@ html,body {
     font-size: 30px;
 }
 
-.shopping-cart p {
-    line-height: 5px;
-}
 
-.shopping-cart h6 {
-    font-weight: 600;
+.shopping-cart h4 {
+    font-weight: bold;
     margin-bottom: 40px;
 }
 
-.shopping-cart {
-  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
-  border-radius: 6px;
-}
 
- 
-.item {
-  margin-top: 20px;
-}
- 
-.item:nth-child(3) {
-  border-top:  1px solid #E1E8EE;
-  border-bottom:  1px solid #E1E8EE;
-}
-.buttons {
-  position: relative;
+.remove-btn {
   padding-top: 30px;
-}
-.delete-btn,
-.like-btn {
-  display: inline-block;
-  Cursor: pointer;
-}
-.delete-btn {
-  width: 18px;
-  height: 17px;
-  background: url(../images/delete-icn.svg) no-repeat center;
-}
- 
-.like-btn {
-  position: absolute;
-  top: 9px;
-  left: 15px;
-  background: url(../images/twitter-heart.png);
-  width: 60px;
-  height: 60px;
-  background-size: 2900%;
-  background-repeat: no-repeat;
-}
-.is-active {
-  animation-name: animate;
-  animation-duration: .8s;
-  animation-iteration-count: 1;
-  animation-timing-function: steps(28);
-  animation-fill-mode: forwards;
-}
- 
-@keyframes animate {
-  0%   { background-position: left;  }
-  50%  { background-position: right; }
-  100% { background-position: right; }
 }
 
 .image {
   height: 80px;
 }
- 
-/* Let’s add some basic style to  product name and description. */
+
 .description {
   padding-top: 20px;
-  /* margin-right: 60px; */
-  /* width: 115px; */
 }
  
 .description span {
@@ -694,6 +786,11 @@ html,body {
   color: #43484D;
   font-weight: 400;
   text-align: center;
+}
+
+.order-summary span{
+  color: #43484D;
+  font-weight: 400;
 }
  
 .description span:first-child {
@@ -722,7 +819,7 @@ html,body {
   font-weight: 300;
 }
  
-button[class*=btn] {
+.quantity button[class*=btn] {
   width: 30px;
   height: 30px;
   background-color: #E1E8EE;
@@ -773,44 +870,27 @@ input:focus {
     text-align: center;
     margin: 6px 0;
   }
-  /* .buttons {
-    margin-right: 50px;
-  } */
+
+  .item {
+    margin-top: 20px;
+  }
+   
 }    
 
+/* end of cart */
 
+/* checkout */
 
-@media (max-width: 800px) {
-  
+.checkout-section {
+  padding: 50px 0; 
 }
-
-
-.show-item {
-  background-color: #E4EAEE;
-  /* padding-bottom: 100px; */
-  padding: 30px;
-  
-}
-
-.show-item h3 {
-  color: #000;
-  font-weight: 200;
-  padding: 20px;
-  margin-bottom: 5px;
-}
-
-.show-item p {
-  font-weight: 200;
-  line-height: 4px;
-
-}
-.show-item h6 {
-  font-weight: 400;
-}
-
-.show-item img {
-  height: 100px;
-  margin-bottom: 15px;
+  @media (min-width: 768px) {
+      .checkout-section {
+          padding: 100px 0; 
+      }
+  }
+.checkout-section.checkout-section-sm {
+  padding: 4em 0; 
 }
 
 .checkout h4 {
@@ -818,12 +898,6 @@ input:focus {
   font-weight: 300;
   margin: 30px 0;
 }
-
-/* .checkout .card {
-  margin-bottom: 20px;
-  padding: 50px;
-  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
-} */
 
 .checkout label {
   text-transform: uppercase;
@@ -848,7 +922,7 @@ input:focus {
 }
 
 .checkout .shipping-btn {
-  background-color: #358ED7;
+  background-color: #323232;
   color: #fff;
   padding: 12px 25px;
   text-transform: uppercase;
@@ -857,21 +931,42 @@ input:focus {
   margin-top: 10px;
 }
 
+
 .mapouter {
   position:relative;
   text-align:right;
-  height:242px;
-  width:316px;
+  height:191px;
+  width:206px;
 }
-.gmap_canvas 
-{overflow:hidden;
+.gmap_canvas {
+  overflow:hidden;
   background:none!important;
-  height:242px;
-  width:316px;
+  height:175px;
+  width:280px;
 }
 
+@media (max-width: 535px) {
+  .checkout .shipping-btn {
+    background-color: #323232;
+    color: #fff;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    float: right;
+    margin-top: 10px;
+  }
+
+  .gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:175px;
+    width:235px;
+  }
+}
+
+
 .shipping .card {
-  border: 1px solid #788995;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
   padding: 20px;
   /* margin-bottom: 30px; */
 }
@@ -895,11 +990,8 @@ input:focus {
 }
 
 .payment {
-  border: 1px solid #788995;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
   padding: 20px;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
   margin: 10px 0;
 }
 
