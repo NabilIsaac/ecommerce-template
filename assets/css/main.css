@@ -3,7 +3,7 @@ html,body {
     /* background-color: #f2f2f2; */
     height:100%;
     color: #43484D !important;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; 
 }
 
 .card {
@@ -161,7 +161,7 @@ html,body {
 
 
 .banner {
-    background-image: url(../images/bg-header1.jpg);
+    background-image: url(../images/banner.jpg);
     background-size: cover;
     /* background-attachment: fixed; */
     background-repeat: no-repeat;
@@ -173,11 +173,13 @@ html,body {
     text-transform: uppercase;
     font-weight: bold;
     padding-top: 150px;
+    color: #000;
 }
 
 .banner p {
     text-transform: uppercase; 
     font-weight: 700;
+    color: #000;
 }
 
 @media (max-width: 535px) {
@@ -187,15 +189,17 @@ html,body {
     font-weight: bold;
     padding-top: 100px;
     text-align: center;
+    color: #000;
   }
 
   .banner p {
     text-transform: uppercase;
     text-align: center;
+    color: #000;
    
   }
   .banner a {
-    background-color: #323232;
+    background-color: #000;
     color: #fff;
     text-transform: uppercase;
     padding: 10px 20px;
@@ -215,12 +219,8 @@ html,body {
   
 }
 
-
-
-
-
 .banner a {
-    background-color: #323232;
+    background-color: #000;
     color: #fff;
     text-transform: uppercase;
     padding: 10px 20px;
@@ -237,7 +237,15 @@ html,body {
 /* start of login */
 
 .login-bg {
-  background-image: url(../images/login-bg.png);
+  background-image: url(../images/login.jpg);
+  /* background-color: lightcyan; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 656px;
+}
+
+.register-bg {
+  background-image: url(../images/register.jpg);
   /* background-color: lightcyan; */
   background-size: cover;
   background-repeat: no-repeat;
@@ -279,7 +287,7 @@ html,body {
 .login-section .google-btn {
   color: #000;
   border-radius: 40px;
-  padding: 10px 10px;
+  padding: 5px 10px;
   width: 50%;
   box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.10);
   background-color: #fff;
@@ -322,7 +330,7 @@ html,body {
   .login-section .google-btn {
     color: #000;
     border-radius: 40px;
-    padding: 10px 10px;
+    padding: 5px 10px;
     width: 90%;
     box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.10);
     background-color: #fff;
@@ -768,19 +776,6 @@ html,body {
 }
 
 
-.shopping-cart h4 {
-    font-weight: 600;
-    padding: 20px;
-    font-size: 30px;
-}
-
-
-.shopping-cart h4 {
-    font-weight: bold;
-    margin-bottom: 40px;
-}
-
-
 .remove-btn {
   padding-top: 30px;
 }
@@ -801,9 +796,9 @@ html,body {
   text-align: center;
 }
 
-.order-summary span{
+.order-summary h5 {
   color: #43484D;
-  font-weight: 400;
+  /* font-weight: 500; */
 }
  
 .description span:first-child {
@@ -819,7 +814,6 @@ html,body {
 .quantity {
   padding-top: 30px;
   text-align: center;
-  /* margin-right: 60px; */
 }
 
 .cart .quantity input {
@@ -1031,61 +1025,16 @@ input {
 }
 
 
-
-.profile {
-  padding: 120px;
+.profile .card {
+  padding: 0 !important;
 }
 
-.profile img{
-  height: 300px;
+.profile a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #323232;
 }
 
-@media (max-width: 535px) {
-  .profile img{
-    height: 150px;
-  }
-}
+.profile a: {}
 
-.profile-bg {
-  background-image: url(../images/coffee.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-bottom: 300px;
-}
-
-.profile h1 {
-  font-weight: bold;
-  font-size: 50px;
-  letter-spacing: 1px;
-}
-
-.profile h4 {
-  color: #000;
-  font-weight: 300;
-  margin: 30px 0;
-}
-
-.profile h5 {
-  font-size: 15px;
-  color: #788995;
-  font-weight: 400;
-}
-
-.profile p {
-  font-size: 20px;
-  letter-spacing: 1px;
-}
-
-.orders p {
-  color: #788995;
-  font-size: 13px;
-}
-.orders img {
-  height: 60px;
-}
-.orders a {
-  background-color: yellow;
-  color: #fff;
-  padding: 3px;
-  border-radius: 6px;
-}
+/* THE END */
