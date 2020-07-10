@@ -3,22 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="assets/images/favicon.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="assets/images/D & B1.jpg" type="image/gif" sizes="16x16">
     <title>EarStore</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,300;1,400,100,200,300,400,500,600,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/all.css">
-    <link rel="stylesheet" href="https://unpkg.com/bs-stepper/dist/css/bs-stepper.min.css">
     <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
     <script defer  src="assets/js/all.js"></script>
-    <script src="https://unpkg.com/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light navbar-transparent fixed-top" id="scrolled">
@@ -76,9 +75,10 @@
             </div>
         </div>
     </nav>
-    <section class="checkout-section">
+    <section class="site-section">
         <div class="col-md-12 col-sm-12">
             <div class="container checkout">
+                <h3 class="page-header">Checkout</h3>
                 <div class="row">
                     <div class="col-md-8 col-sm-12 offset-md-2">
                         <!-- <div class="row col-md-12 col-sm-12"> -->
@@ -246,7 +246,7 @@
                                         </div>
                                         </a>
                                     </div>
-                                    <a href="#payment" class="shipping-btn">complete order</a>
+                                    <a href="#" onclick="buybtn()" class="shipping-btn" type="button">complete order</a>
                                 </form>
                             </div>
                         </div>
@@ -355,6 +355,10 @@
         </div>
     </div>
     <script>
+          function buybtn() {
+            swal("Order Completed!", "Thanks for shopping with us!", "success");
+        }
+
         $(document).ready(function(){
 
             var scrollTop = 0;

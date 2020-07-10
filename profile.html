@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="assets/images/favicon.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="assets/images/D & B1.jpg" type="image/gif" sizes="16x16">
     <title>EarStore</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -78,17 +78,53 @@
     <section class="site-section">
         <div class="col-md-12 col-sm-12">
             <div class="container">
-                <div class="row profile">
-                    <div class="col-md-4 col-sm-12">
+                <!-- <h3 class="page-header">Profile</h3> -->
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 profile">
                         <div class="card">
-                            <a href="#">My Account</a>
-                            <a href="#">My Account</a>
-                            <a href="#">My Account</a>
+                            <div class="card-header">
+                                <h6>Account Details</h6>
+                                <h6 class="float-right"><a data-toggle="modal" data-target="#staticBackdrop" href=""><i class="fas fa-edit"></i></a></h6>
+                            </div>
+                            <div class="card-body">
+                                <p>John Doe</p>
+                                <p>johndoe@gmail.com</p>
+                                <a data-toggle="modal" data-target="#passwordModal" href="#">Change password</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-8 col-sm-12">
+                    <div class="col-md-8 col-sm-12 order">
                         <div class="card">
-                            
+                            <div class="border">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-12">
+                                        <img src="assets/images/backpack4.jpg" height="100px"> 
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <h5>Black backpack Double Zipper</h5>
+                                        <p>Placed on 19-05-2020</p>
+                                        <h4 class="success"><i class="fas fa-check-circle"></i> delivered on 22-10-2020</h4>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12">
+                                        <a href="#">see details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-12">
+                                        <img src="assets/images/backpack5.jpg" height="100px"> 
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <h5>Black backpack Single Zipper</h5>
+                                        <p>Placed on 10-01-2020</p>
+                                        <h4 class="success"><i class="fas fa-check-circle"></i> delivered on 22-02-2020</h4>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12">
+                                        <a href="#" data-toggle="modal" data-target="#orderModal">see details</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,6 +171,155 @@
             </div>
         </div>
     </section>
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Address</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for="name">full name</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div> 
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for="email">email</label>
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input type="text" class="form-control" id="address">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for="country">country</label>
+                                    <input type="text" class="form-control" id="country">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for="phone">phone</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger shadow-none" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary shadow-none">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Address</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password">
+                                </div> 
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for="newpassword">New Password</label>
+                                    <input type="password" class="form-control" id="newpassword">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger shadow-none" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary shadow-none">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Order Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 order">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <p>Order no:</p>
+                                    <h6>212383585</h6> 
+                                </div>
+                                <div class="col-md-12 col-sm-12">
+                                    <p>Status:</p>
+                                    <h6 class="success">Delivered</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 paid-info">
+                            <div class="border">
+                                <h5 class="modal-title" id="staticBackdropLabel">Payment Information</h5>
+                                <p>Paid with credit card</p>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+                                        <p>Item total:</p>
+                                        <p>$200.00</p> 
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <p>Shipping fee:</p>
+                                        <p>$10.00</p>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <p>Total:</p>
+                                        <p>$210.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 paid-info">
+                            <div class="border">
+                                <h5 class="modal-title" id="staticBackdropLabel">Delivery Information</h5>
+                                <p>Standard door delivery</p>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+                                        <p>John Doe</p>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <p>23 Dantu ave</p>
+                                        <p>Tx, USA</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         $(document).ready(function(){
             var scrollTop = 0;

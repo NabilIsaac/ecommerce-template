@@ -9,17 +9,17 @@ html,body {
 .card {
   margin-bottom: 20px;
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 5px;
   box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
 }
 
-@media (max-width: 535px) {
+/* @media (max-width: 535px) {
   .card {
     margin-bottom: 20px;
     padding: 25px;
     box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
   }
-}
+} */
 
 /* start of nav and banner section */
 
@@ -234,6 +234,13 @@ html,body {
   margin-left: 0 !important;
 }
 
+.page-header {
+  font-weight: 500;
+  text-align: center;
+  color: #43474D;
+  padding-bottom: 30px;
+}
+
 /* start of login */
 
 .login-bg {
@@ -353,12 +360,13 @@ html,body {
 
 /* end of login */
 
+
 .site-section {
   padding: 100px 0; 
 }
   @media (min-width: 768px) {
       .site-section {
-          padding: 200px 0; 
+          padding: 140px 0; 
       }
   }
 .site-section.site-section-sm {
@@ -1032,9 +1040,121 @@ input {
 .profile a {
   padding-top: 12px;
   padding-bottom: 12px;
-  color: #323232;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #43474D;
 }
 
-.profile a: {}
+.profile a:hover {
+  color: #fff;
+  background-color: #43474D;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.profile h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #43474D;
+}
+
+.profile h6{
+  display: inline;
+}
+
+.order {
+  text-align: center;
+}
+
+.order h5 {
+  /* color: #43474D; */
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.order .success {
+  color: green;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.order .failed {
+  color: #43474D;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 20px 0;
+  font-size: 13px;
+}
+
+.order a {
+  color: #43474D;
+  font-weight: 500;
+  text-transform: uppercase;
+  /* padding: 20px 0; */
+  font-size: 13px;
+}
+
+.order a:hover {
+  background-color: #43484D;
+  color: #ccc;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+
+.order p {
+  color: #43474D;
+}
+
+.order p, h6 {
+  display: inline;
+}
+
+.paid-info p {
+  font-size: 15px;
+  line-height: 3px;
+  padding-bottom: 10px;
+}
+
+.paid-info p {
+  display: inline;
+}
+
+.category a {
+  color: #43474D;
+  text-align: center;
+}
+
+
+/* start of wishlist */
+.wishlist .hr {
+  border-bottom: 1px solid #43474D;;
+}
+
+.wishlist img {
+  height: 100px;
+}
+
+.wishlist h6 {
+  padding-top: 50px;
+}
+
+@media (max-width: 535px) {
+  .wishlist h6 {
+    padding-top: 0;
+  }
+}
+
+.border {
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.wishlist a {
+  color: #43474D;
+}
 
 /* THE END */
