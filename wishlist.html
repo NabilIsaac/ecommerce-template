@@ -7,6 +7,7 @@
     <title>EarStore</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,follow" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
@@ -79,34 +80,39 @@
         <div class="col-md-12 col-sm-12">
             <div class="container">
                 <div class="col-md-8 col-sm-12 offset-md-2">
-                    <!-- <h3 class="page-header">Wishlist</h3> -->
                     <div class="card wishlist">
-                        <a href="single-product.html">
-                            <div class="row border text-center">
-                                <div class="col-md-4 col-sm-12">
-                                <img src="assets/images/backpack5.jpg" class="center"> 
-                                </div>
-                                <div class="col-md-4 col-sm-12">
-                                    <h6>Black backpack</h6> 
-                                </div>
-                                <div class="col-md-4 col-sm-12">
-                                    <h6>$100.00</h6> 
-                                </div>
+                        <div class="row border text-center">
+                            
+                            <div class="col-md-3 col-sm-12">
+                                <a href="single-product.html"><img src="assets/images/backpack5.jpg" class="center"></a> 
                             </div>
-                        </a>
-                        <a href="single-product.html">
-                            <div class="row border text-center">
-                                <div class="col-md-4 col-sm-12">
-                                <img src="assets/images/backpack6.jfif"> 
-                                </div>
-                                <div class="col-md-4 col-sm-12">
-                                    <h6>Black backpack</h6> 
-                                </div>
-                                <div class="col-md-4 col-sm-12">
-                                    <h6>$100.00</h6> 
-                                </div>
+                            <div class="col-md-4 col-sm-12">
+                                <a href="single-product.html"><h5>Black backpack</h5></a> 
                             </div>
-                        </a>
+                            <div class="col-md-2 col-sm-12">
+                                <a href="single-product.html"><h6>$100.00</h6></a> 
+                            </div>
+                            <div class="col-md-2 col-sm-12">
+                                <h6><a href="#" class="btn btn-danger btn-sm shadow-none text-white"><i class="fas fa-trash-alt"></i></a></h6>
+                                <h6><a href="single-product.html" class="btn btn-primary btn-sm text-white"><i class="fas fa-shopping-cart"></i></a></h6>
+                            </div>
+                        </div>
+                        <div class="row border text-center">
+                            
+                            <div class="col-md-3 col-sm-12">
+                                <a href="single-product.html"><img src="assets/images/backpack6.jfif"></a>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <a href="single-product.html"><h5>Blue backpack</h5></a> 
+                            </div>
+                            <div class="col-md-2 col-sm-12">
+                                <a href="single-product.html"><h6>$100.00</h6></a> 
+                            </div>
+                            <div class="col-md-2 col-sm-12">
+                                <h6><a href="#" class="btn btn-danger btn-sm shadow-none text-white"><i class="fas fa-trash-alt"></i></a></h6>
+                                <h6><a href="single-product.html" class="btn btn-primary btn-sm shadow-none text-white"><i class="fas fa-shopping-cart"></i></a></h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
                
@@ -166,10 +172,10 @@
             });
 
             $('.color-choose input').on('click', function() {
-                var headphonesColor = $(this).attr('data-image');
+                var productsColor = $(this).attr('data-image');
 
                 $('.active').removeClass('active');
-                $('.left-column img[data-image = ' + headphonesColor + ']').addClass('active');
+                $('.left-column img[data-image = ' + productsColor + ']').addClass('active');
                 $(this).addClass('active');
             });
         });

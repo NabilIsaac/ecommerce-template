@@ -17,6 +17,7 @@
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
     <script defer  src="assets/js/all.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 <body>
@@ -77,81 +78,210 @@
     </nav>
     <section class="site-section">
         <div class="col-md-12 col-sm-12">
-            <div class="container">
-                <div class="row category">
-                    <div class="col-md-3 col-sm-12 text-center">
-                        <a href="single-product.html">
-                            <div class="card">
-                                <img src="assets/images/backpack4.jpg" class="inner-img" height="210px">
+            <div class="container category">
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 hide-filters">
+                        <nav class="product-filter">
+                  
+                            <div class="sort">
+                          
+                              <div class="collection-sort">
+                                <label class="font-weight-bold">Filter by:</label>
+                                <select>
+                                  <option value="/">All Bags</option>
+                                </select>
+                              </div>
+                          
+                              <div class="collection-sort">
+                                <label class="font-weight-bold">Sort by:</label>
+                                <select>
+                                  <option value="/">Featured</option>
+                                </select>
+                              </div>
+                          
                             </div>
-                            <h6>Gray Backpack</h6>
-                            <p>$109.00</p>
-                        </a>
+                          
+                        </nav>
                     </div>
-                    <div class="col-md-3 col-sm-12 text-center">
-                        <a href="single-product.html">
-                            <div class="card">
-                                <img src="assets/images/backpack5.jpg" class="inner-img" height="210px">
+                    <div class="col-md-3 col-sm-12 hide-filters">
+                        <section>
+                            <h5 class="font-weight-bold mb-3">Condition</h5>
+                            <div class="filter">
+                                <div class="form-check pl-0 mb-3">
+                                    <input type="checkbox" class="form-check-input filled-in" id="new">
+                                    <label class="form-check-label small text-uppercase card-link-secondary" for="new">New</label>
+                                </div>
+                                <div class="form-check pl-0 mb-3">
+                                    <input type="checkbox" class="form-check-input filled-in" id="used">
+                                    <label class="form-check-label small text-uppercase card-link-secondary" for="used">Used</label>
+                                </div>
+                                <div class="form-check pl-0 mb-3">
+                                    <input type="checkbox" class="form-check-input filled-in" id="collectible">
+                                    <label class="form-check-label small text-uppercase card-link-secondary" for="collectible">Collectible</label>
+                                </div>
+                                <div class="form-check pl-0 mb-3 pb-1">
+                                    <input type="checkbox" class="form-check-input filled-in" id="renewed">
+                                    <label class="form-check-label small text-uppercase card-link-secondary" for="renewed">Renewed</label>
+                                </div>
                             </div>
-                            <h6>Gray Backpack</h6>
-                            <p>$109.00</p>
-                        </a>
+                        </section>
+                        <section class="mb-4">
+                            <h5 class="font-weight-bold mb-3">Price</h5>
+                      
+                            <div class="slider-price d-flex align-items-center my-4">
+                              <span class="font-weight-normal small text-muted mr-2">$0</span>
+                              <form class="multi-range-field w-100 mb-1">
+                                <input id="multi" class="multi-range" type="range" />
+                              </form>
+                              <span class="font-weight-normal small text-muted ml-2">$100</span>
+                            </div>
+                        </section>
+                        <section>
+                            <h5 class="font-weight-bold mb-3">Brands</h5>
+                            <div class="filter">
+                                <div class="form-check pl-0 mb-3">
+                                    <input type="radio" class="form-check-input" id="under25" name="materialExampleRadios">
+                                    <label class="form-check-label small text-uppercase card-link-secondary" for="under25">Adidas</label>
+                                  </div>
+                                  <div class="form-check pl-0 mb-3">
+                                    <input type="radio" class="form-check-input" id="2550" name="materialExampleRadios">
+                                    <label class="form-check-label small text-uppercase card-link-secondary" for="2550">Puma</label>
+                                  </div>
+                                  <div class="form-check pl-0 mb-3">
+                                    <input type="radio" class="form-check-input" id="50100" name="materialExampleRadios">
+                                    <label class="form-check-label small text-uppercase card-link-secondary" for="50100">Balenciaga</label>
+                                  </div>
+                                  <div class="form-check pl-0 mb-3">
+                                    <input type="radio" class="form-check-input" id="100200" name="materialExampleRadios">
+                                    <label class="form-check-label small text-uppercase card-link-secondary" for="100200">Gucci</label>
+                                  </div>
+                                  <div class="form-check pl-0 mb-3">
+                                    <input type="radio" class="form-check-input" id="200above" name="materialExampleRadios">
+                                    <label class="form-check-label small text-uppercase card-link-secondary" for="200above">Armani</label>
+                                  </div>
+                            </div>
+                        </section>
                     </div>
-                    <div class="col-md-3 col-sm-12 text-center">
-                        <a href="single-product.html">
-                            <div class="card">
-                                <img src="assets/images/backpack6.jfif" class="inner-img" height="210px">
+                    <div class="col-md-9 col-sm-12">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12 text-center">
+                                <a href="single-product.html">
+                                    <div class="card">
+                                        <img src="assets/images/backpack4.jpg" class="inner-img">
+                                    </div>
+                                    <h6>Gray Backpack</h6>
+                                    <p>$109.00</p>
+                                    
+                                </a>
+                                <a href="#" onclick="buybtn()" class="btn add-to-cart mr-1 mb-3">
+                                    <i class="fas fa-shopping-cart pr-1"></i>
+                                    Add to cart
+                                </a>
+                                <button class="btn btn-sm like-btn mb-3 shadow-none"></button>
                             </div>
-                            <h6>Gray Backpack</h6>
-                            <p>$109.00</p>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-12 text-center">
-                        <a href="single-product.html">
-                            <div class="card">
-                                <img src="assets/images/backpack1.jpg" class="inner-img" height="210px">
+                            <div class="col-md-3 col-sm-12 text-center">
+                                <a href="single-product.html">
+                                    <div class="card">
+                                        <img src="assets/images/backpack5.jpg" class="inner-img">
+                                    </div>
+                                    <h6>Gray Backpack</h6>
+                                    <p>$109.00</p>
+                                </a>
+                                <a href="#" onclick="buybtn()" class="btn add-to-cart mr-1 mb-3">
+                                    <i class="fas fa-shopping-cart pr-1"></i>
+                                    Add to cart
+                                </a>
+                                <button class="btn btn-sm like-btn mb-3 shadow-none"></button>
                             </div>
-                            <h6>Gray Backpack</h6>
-                            <p>$109.00</p>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-12 text-center">
-                        <a href="single-product.html">
-                            <div class="card">
-                                <img src="assets/images/duffle5.jpg" class="inner-img" height="210px">
+                            <div class="col-md-3 col-sm-12 text-center">
+                                <a href="single-product.html">
+                                    <div class="card">
+                                        <img src="assets/images/backpack6.jfif" class="inner-img">
+                                    </div>
+                                    <h6>Gray Backpack</h6>
+                                    <p>$109.00</p>
+                                </a>
+                                <a href="#" onclick="buybtn()" class="btn add-to-cart mr-1 mb-3">
+                                    <i class="fas fa-shopping-cart pr-1"></i>
+                                    Add to cart
+                                </a>
+                                <button class="btn btn-sm like-btn mb-3 shadow-none"></button>
                             </div>
-                            <h6>Gray Backpack</h6>
-                            <p>$109.00</p>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-12 text-center">
-                        <a href="single-product.html">
-                            <div class="card">
-                                <img src="assets/images/duffle4.jpg" class="inner-img" height="210px">
+                            <div class="col-md-3 col-sm-12 text-center">
+                                <a href="single-product.html">
+                                    <div class="card">
+                                        <img src="assets/images/backpack1.jpg" class="inner-img">
+                                    </div>
+                                    <h6>Gray Backpack</h6>
+                                    <p>$109.00</p>
+                                </a>
+                                <a href="#" onclick="buybtn()" class="btn add-to-cart mr-1 mb-3">
+                                    <i class="fas fa-shopping-cart pr-1"></i>
+                                    Add to cart
+                                </a>
+                                <button class="btn btn-sm like-btn mb-3 shadow-none"></button>
                             </div>
-                            <h6>Gray Backpack</h6>
-                            <p>$109.00</p>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-12 text-center">
-                        <a href="single-product.html">
-                            <div class="card">
-                                <img src="assets/images/duffle 2.jpg" class="inner-img" height="210px">
+                            <div class="col-md-3 col-sm-12 text-center">
+                                <a href="single-product.html">
+                                    <div class="card">
+                                        <img src="assets/images/duffle5.jpg" class="inner-img">
+                                    </div>
+                                    <h6>Gray Backpack</h6>
+                                    <p>$109.00</p>
+                                </a>
+                                <a href="#" onclick="buybtn()" class="btn add-to-cart mr-1 mb-3">
+                                    <i class="fas fa-shopping-cart pr-1"></i>
+                                    Add to cart
+                                </a>
+                                <button class="btn btn-sm like-btn mb-3 shadow-none"></button>
                             </div>
-                            <h6>Gray Backpack</h6>
-                            <p>$109.00</p>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-12 text-center">
-                        <a href="single-product.html">
-                            <div class="card">
-                                <img src="assets/images/sherpa-yatra-duffle-bag-luggage.jpg" class="inner-img" height="210px">
+                            <div class="col-md-3 col-sm-12 text-center">
+                                <a href="single-product.html">
+                                    <div class="card">
+                                        <img src="assets/images/duffle4.jpg" class="inner-img">
+                                    </div>
+                                    <h6>Gray Backpack</h6>
+                                    <p>$109.00</p>
+                                </a>
+                                <a href="#" onclick="buybtn()" class="btn add-to-cart mr-1 mb-3">
+                                    <i class="fas fa-shopping-cart pr-1"></i>
+                                    Add to cart
+                                </a>
+                                <button class="btn btn-sm like-btn mb-3 shadow-none"></button>
                             </div>
-                            <h6>Gray Backpack</h6>
-                            <p>$109.00</p>
-                        </a>
+                            <div class="col-md-3 col-sm-12 text-center">
+                                <a href="single-product.html">
+                                    <div class="card">
+                                        <img src="assets/images/duffle 2.jpg" class="inner-img">
+                                    </div>
+                                    <h6>Gray Backpack</h6>
+                                    <p>$109.00</p>
+                                </a>
+                                <a href="#" onclick="buybtn()" class="btn add-to-cart mr-1 mb-3">
+                                    <i class="fas fa-shopping-cart pr-1"></i>
+                                    Add to cart
+                                </a>
+                                <button class="btn btn-sm like-btn mb-3 shadow-none"></button>
+                            </div>
+                            <div class="col-md-3 col-sm-12 text-center">
+                                <a href="single-product.html">
+                                    <div class="card">
+                                        <img src="assets/images/sherpa-yatra-duffle-bag-luggage.jpg" class="inner-img">
+                                    </div>
+                                    <h6>Gray Backpack</h6>
+                                    <p>$109.00</p>
+                                </a>
+                                <a href="#" onclick="buybtn()" class="btn add-to-cart mr-1 mb-3">
+                                    <i class="fas fa-shopping-cart pr-1"></i>
+                                    Add to cart
+                                </a>
+                                <button class="btn btn-sm like-btn mb-3 shadow-none"></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -195,7 +325,17 @@
         </div>
     </section>
     <script>
+
+        function buybtn() {
+            swal("Product Added to Cart", "Continue shopping", "success");
+        }
+        
+        $('.like-btn').on('click', function() {
+            $(this).toggleClass('is-active');
+        });
+
         $(document).ready(function(){
+
             var scrollTop = 0;
             $(window).scroll(function(){
                 scrollTop = $(window).scrollTop();
