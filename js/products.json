@@ -1,0 +1,85 @@
+[
+    {
+        "id": 1,
+        "name": "Backpack 1",
+        "description": "Devices and gadgets",
+        "price": 29.99,
+        "photo": "../assets/images/backpack1.jpg",
+        "categoryId": 2,
+        "isFeatured": true
+    },
+    {
+        "id": 2,
+        "name": "Backpack 2",
+        "description": "Printed and digital books",
+        "price": 19.99,
+        "photo": "../assets/images/backpack2.jpg",
+        "categoryId": 2
+    },
+    {
+        "id": 3,
+        "name": "Backpack 3",
+        "description": "Apparel and accessories",
+        "price": 39.99,
+        "photo": "../assets/images/backpack3.jfif",
+        "categoryId": 2
+    },
+    {
+        "id": 4,
+        "name": "Backpack 4",
+        "description": "Furniture and kitchenware",
+        "price": 49.99,
+        "photo": "../assets/images/backpack4.jpg",
+        "categoryId": 2
+    },
+    {
+        "id": 5,
+        "name": "Backpack 5",
+        "description": "Sporting goods and outdoor gear",
+        "price": 59.99,
+        "photo": "../assets/images/backpack5.jpg",
+        "categoryId": 2
+    },
+    {
+        "id": 6,
+        "name": "Duffle 1",
+        "description": "Devices and gadgets",
+        "price": 29.99,
+        "photo": "../assets/images/duffle2.jpg",
+        "categoryId": 1
+    },
+    {
+        "id": 7,
+        "name": "Duffle 2",
+        "description": "Printed and digital books",
+        "price": 19.99,
+        "photo": "../assets/images/gym-bag-1.jpg",
+        "categoryId": 1,
+        "isFeatured": true
+    },
+    {
+        "id": 8,
+        "name": "Duffle 3",
+        "description": "Apparel and accessories",
+        "price": 39.99,
+        "photo": "../assets/images/duffle4.jpg",
+        "categoryId": 1
+    },
+    {
+        "id": 9,
+        "name": "Duffle 4",
+        "description": "Furniture and kitchenware",
+        "price": 49.99,
+        "photo": "../assets/images/duffle5.jpg",
+        "categoryId": 1,
+        "isFeatured": true
+    },
+    {
+        "id": 10,
+        "name": "Duffle 5",
+        "description": "Sporting goods and outdoor gear",
+        "price": 59.99,
+        "photo": "../assets/images/head-racket-duffle-bag.jpg",
+        "categoryId": 1
+    }
+]

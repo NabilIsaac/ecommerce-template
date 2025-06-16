@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Duffles",
+        "description": "Devices and gadgets"
+    },
+    {
+        "id": 2,
+        "name": "Backpacks",
+        "description": "Printed and digital books"
+    },
+    {
+        "id": 3,
+        "name": "Accessories",
+        "description": "Apparel and accessories"
+    },
+    {
+        "id": 4,
+        "name": "Brands",
+        "description": "Furniture and kitchenware"
+    },
+    {
+        "id": 5,
+        "name": "Support",
+        "description": "Sporting goods and outdoor gear"
+    }
+]

@@ -27,22 +27,7 @@
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse topnav" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link" href="category.html">duffles</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="category.html">backpacks</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">accessories</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">brands</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">support</a>
-                </li>
+            <ul class="navbar-nav" id="categories">
             </ul>
             </div>
             <div class="collapse navbar-collapse w-100 order-3 left-align-navbar topnav" id="navbarNav">
@@ -77,63 +62,8 @@
     </nav>
     <section class="site-section">
         <div class="col-md-12 col-sm-12">
-            <div class="container">
-                 <div class="row">
-                     <div class="col-md-8 col-sm-12 left-column">
-                         <img data-image="black" src="assets/images/head-racket-duffle-bag.jpg" height="430px">
-                         <img data-image="blue" src="assets/images/duffle 2.jpg" height="430px">
-                         <img data-image="red" class="active" src="assets/images/backpack1.jpg" height="430px">
-                     </div>
-                     <div class="col-md-4 col-sm-12">
-                        <div class="product-description">
-                            <!-- <span>Headphones</span> -->
-                            <h3>Black Duffle Bag</h3>
-                            <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
-                          </div>
-                  
-                          <!-- Product Configuration -->
-                          <div class="product-configuration">
-                  
-                            <!-- Product Color -->
-                            <div class="product-color">
-                              <span>Color</span>
-                  
-                              <div class="color-choose">
-                                <div>
-                                  <input data-image="red" type="radio" id="red" name="color" value="red" checked>
-                                  <label for="red"><span></span></label>
-                                </div>
-                                <div>
-                                  <input data-image="blue" type="radio" id="blue" name="color" value="blue">
-                                  <label for="blue"><span></span></label>
-                                </div>
-                                <div>
-                                  <input data-image="black" type="radio" id="black" name="color" value="black">
-                                  <label for="black"><span></span></label>
-                                </div>
-                              </div>
-                  
-                            </div>
-                  
-                            <!-- Product Configuration -->
-                            <div class="product-config">
-                              <span>Size</span>
-                  
-                              <div class="cable-choose">
-                                <button>Large</button>
-                                <button>Medium</button>
-                                <button>Small</button>
-                              </div>
-                            </div>
-                          </div>
-                  
-                          <!-- Product Pricing -->
-                          <div class="product-price">
-                            <span>$148.99</span>
-                            <a href="cart.html">Buy now</a>
-                          </div>
-                     </div>
-                 </div>
+            <div class="container" id="product-details">
+               
             </div>
         </div>
     </section>
@@ -176,6 +106,7 @@
             </div>
         </div>
     </section>
+    <script src="./js/script.js"></script>
     <script>
 
         $(document).ready(function(){
