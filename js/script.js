@@ -217,14 +217,13 @@ async function loadProduct() {
 loadProduct();
 
 function updateCartCount() {
-  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  const cart = JSON.parse(localStorage.getItem("cart") || "[]");
   const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
-  const badge = document.getElementById('cart-count');
+  const badge = document.getElementById("cart-count");
   if (badge) {
     badge.textContent = totalQty;
   }
 }
-
 
 function addToCart(id) {
   const cart = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -243,44 +242,108 @@ async function renderCart() {
   const products = await fetchProducts();
   const cart = JSON.parse(localStorage.getItem("cart") || "[]");
   const container = document.getElementById("cart-items");
+  const summaryContainer = document.getElementById("order-summary");
+
   if (!cart.length) {
     container.innerHTML = "<p>Cart is empty.</p>";
+    summaryContainer.innerHTML = `<div class="card text-center">
+      <h4>Order Summary</h4>
+      <div class="col-md-12 col-sm-12">
+        <div class="row">
+          <div class="col-6">
+            <h5>Subtotal</h5>
+            <h5>Shipping</h5>
+          </div>
+          <div class="col-6">
+            <h5>$ 0.00</h5>
+            <h5>$ 0.00</h5>
+          </div>
+        </div>
+        <hr>
+        <div class="row mb-5">
+          <div class="col-6">
+            <h4>Total</h4>    
+          </div>
+          <div class="col-6">
+            <h4>$ 0.00</h4>
+          </div>
+        </div>
+      </div>
+    </div>`;
     return;
   }
+
   let html = "";
+  let subtotal = 0;
+
   cart.forEach((item) => {
     const product = products.find((p) => p.id === item.id);
+    const itemTotal = product.price * item.qty;
+    subtotal += itemTotal;
+
     html += `
-    <div class="card item">
-                  <div class="row">
-                    <div class="col-md-2 col-sm-12">
-                        <div class="description">
-                            <span>${product.name}</span>
-                        </div>
-                        
-                    </div>
-                    <div class="col-md-2 col-sm-12">
-                        <img src="${product.photo}" alt="" class="image center">
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                      <div class="quantity">
-                        <button class="plus-btn" type="button" name="button">
-                          <img src="assets/images/plus.svg" alt="" />
-                        </button>
-                        <input type="text" name="name" value="${item.qty}" readonly />
-                        <button class="minus-btn" type="button" name="button">
-                          <img src="assets/images/minus.svg" alt="" />
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-md-2 col-sm-12">
-                      <p class="total-price">$ ${product.price}</p>
-                    </div>
-                    <div class="col-md-2 col-sm-12 text-center  remove-btn">
-                      <button class="btn btn-danger btn-sm shadow-none"><i class="fas fa-trash-alt"></i></button>
-                    </div>
-                  </div>
-                </div>`;
+      <div class="card item">
+        <div class="row">
+          <div class="col-md-2 col-sm-12">
+              <div class="description">
+                  <span>${product.name}</span>
+              </div>
+          </div>
+          <div class="col-md-2 col-sm-12">
+              <img src="${product.photo}" alt="" class="image center">
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="quantity">
+              <button class="plus-btn" type="button" name="button">
+                <img src="assets/images/plus.svg" alt="" />
+              </button>
+              <input type="text" name="name" value="${item.qty}" readonly />
+              <button class="minus-btn" type="button" name="button">
+                <img src="assets/images/minus.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-12">
+            <p class="total-price">$ ${itemTotal.toFixed(2)}</p>
+          </div>
+          <div class="col-md-2 col-sm-12 text-center remove-btn">
+            <button class="btn btn-danger btn-sm shadow-none"><i class="fas fa-trash-alt"></i></button>
+          </div>
+        </div>
+      </div>`;
   });
+
   container.innerHTML = html;
+
+  // Calculate order summary
+  const shipping = 10.0;
+  const total = subtotal + shipping;
+
+  summaryContainer.innerHTML = `
+    <div class="card text-center">
+      <h4>Order Summary</h4>
+      <div class="col-md-12 col-sm-12">
+        <div class="row">
+          <div class="col-6">
+            <h5>Subtotal</h5>
+            <h5>Shipping</h5>
+          </div>
+          <div class="col-6">
+            <h5>$${subtotal.toFixed(2)}</h5>
+            <h5>$${shipping.toFixed(2)}</h5>
+          </div>
+        </div>
+        <hr>
+        <div class="row mb-5">
+          <div class="col-6">
+            <h4>Total</h4>    
+          </div>
+          <div class="col-6">
+            <h4>$${total.toFixed(2)}</h4>
+          </div>
+        </div>
+        <a href="checkout.html">Order Now</a>
+      </div>
+    </div>
+  `;
 }
