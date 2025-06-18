@@ -41,9 +41,12 @@
                             </form>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cart.html"><h1><i class="fa fa-shopping-cart"></i><span class="badge badge-light">2</span></h1></a>
-                    </li>
+                   <a class="nav-link" href="cart.html">
+                            <h1>
+                                <i class="fa fa-shopping-cart"></i>
+                                <span id="cart-count" class="badge badge-light">0</span>
+                            </h1>
+                        </a>
                     <li class="nav-item">
                         <a class="nav-link" href="wishlist.html"><h1><i class="far fa-heart"></i><span class="badge badge-light">4</span></h1></a>
                     </li>
@@ -81,31 +84,31 @@
                                         <div class="col-md-6 col-sm-12">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">last name</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-sm-12">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-12">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">country</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-12">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">city</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-12">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">phone</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-12">
@@ -341,6 +344,7 @@
     </div>
     <script src="./js/script.js"></script>
     <script>
+        updateCartCount();
         function buybtn() {
             swal("Order Completed!", "Thanks for shopping with us!", "success");
         }

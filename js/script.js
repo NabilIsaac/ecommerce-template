@@ -204,7 +204,7 @@ async function loadProduct() {
                           <!-- Product Pricing -->
                           <div class="product-price">
                             <span>$ ${product.price}</span>
-                            <a href="cart.html">Buy now</a>
+                            <button class="btn btn-primary btn-lg shadow-none" onclick="addToCart(${product.id})">Add to cart</button>
                           </div>
                      </div>
                  </div>
@@ -215,3 +215,72 @@ async function loadProduct() {
   }
 }
 loadProduct();
+
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+  const badge = document.getElementById('cart-count');
+  if (badge) {
+    badge.textContent = totalQty;
+  }
+}
+
+
+function addToCart(id) {
+  const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+  const item = cart.find((p) => p.id === id);
+  if (item) {
+    item.qty += 1;
+  } else {
+    cart.push({ id, qty: 1 });
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Added to cart!");
+  updateCartCount();
+}
+
+async function renderCart() {
+  const products = await fetchProducts();
+  const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+  const container = document.getElementById("cart-items");
+  if (!cart.length) {
+    container.innerHTML = "<p>Cart is empty.</p>";
+    return;
+  }
+  let html = "";
+  cart.forEach((item) => {
+    const product = products.find((p) => p.id === item.id);
+    html += `
+    <div class="card item">
+                  <div class="row">
+                    <div class="col-md-2 col-sm-12">
+                        <div class="description">
+                            <span>${product.name}</span>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <img src="${product.photo}" alt="" class="image center">
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                      <div class="quantity">
+                        <button class="plus-btn" type="button" name="button">
+                          <img src="assets/images/plus.svg" alt="" />
+                        </button>
+                        <input type="text" name="name" value="${item.qty}" readonly />
+                        <button class="minus-btn" type="button" name="button">
+                          <img src="assets/images/minus.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                      <p class="total-price">$ ${product.price}</p>
+                    </div>
+                    <div class="col-md-2 col-sm-12 text-center  remove-btn">
+                      <button class="btn btn-danger btn-sm shadow-none"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                  </div>
+                </div>`;
+  });
+  container.innerHTML = html;
+}

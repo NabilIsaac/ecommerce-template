@@ -56,9 +56,12 @@
                             </form>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cart.html"><h1><i class="fa fa-shopping-cart"></i><span class="badge badge-light">2</span></h1></a>
-                    </li>
+                     <a class="nav-link" href="cart.html">
+                            <h1>
+                                <i class="fa fa-shopping-cart"></i>
+                                <span id="cart-count" class="badge badge-light">0</span>
+                            </h1>
+                        </a>
                     <li class="nav-item">
                         <a class="nav-link" href="wishlist.html"><h1><i class="far fa-heart"></i><span class="badge badge-light">4</span></h1></a>
                     </li>
@@ -159,6 +162,7 @@
         </div>
     </section>
     <script>
+        updateCartCount();
         $(document).ready(function(){
             var scrollTop = 0;
             $(window).scroll(function(){

@@ -43,7 +43,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cart.html"><h1><i class="fa fa-shopping-cart"></i><span class="badge badge-light">2</span></h1></a>
+                        <a class="nav-link" href="cart.html"><h1><i class="fa fa-shopping-cart"></i><span id="cart-count" class="badge badge-light">0</span></h1></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="wishlist.html"><h1><i class="far fa-heart"></i><span class="badge badge-light">4</span></h1></a>
@@ -67,37 +67,7 @@
    <div class="col-md-12 col-sm-12">
         <div class="container cart">
            <div class="row">
-            <div class="col-md-8 col-sm-12">
-                <div class="card item">
-                  <div class="row">
-                    <div class="col-md-2 col-sm-12">
-                        <div class="description">
-                            <span>Black backpack</span>
-                        </div>
-                        
-                    </div>
-                    <div class="col-md-2 col-sm-12">
-                        <img src="assets/images/backpack1.jpg" alt="" class="image center">
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                      <div class="quantity">
-                        <button class="plus-btn" type="button" name="button">
-                          <img src="assets/images/plus.svg" alt="" />
-                        </button>
-                        <input type="text" name="name" value="1">
-                        <button class="minus-btn" type="button" name="button">
-                          <img src="assets/images/minus.svg" alt="" />
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-md-2 col-sm-12">
-                      <p class="total-price">$549</p>
-                    </div>
-                    <div class="col-md-2 col-sm-12 text-center  remove-btn">
-                      <button class="btn btn-danger btn-sm shadow-none"><i class="fas fa-trash-alt"></i></button>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-md-8 col-sm-12" id="cart-items">
             </div>
             <div class="col-md-4 col-sm-12 order-summary">
                  <div class="card text-center">
@@ -170,7 +140,9 @@
     </div>
 </section>
 <script src="./js/script.js"></script>
+  <script>renderCart();</script>
 <script>
+    updateCartCount();
     $('.minus-btn').on('click', function(e) {
     	e.preventDefault();
     	var $this = $(this);
